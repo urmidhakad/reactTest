@@ -1,0 +1,412 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.para{
+  font-weight: bold;
+}
+.home {
+  margin: 20px;
+}
+
+.sectionOne {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  gap: 1px; /* Gap between left and right sides */
+margin-top: 150px;
+
+}
+.sectionOneContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0 60px; /* Adjust the value as needed for the gap */
+}
+
+
+.leftSide {
+  display: flex; /* Set to flex to align children side by side */
+  gap: 1px; /* Gap between photo containers */
+  margin-left: 200px;
+}
+
+.rightSide {
+  width: 50%; /* Set maximum width to 40% */
+  text-align: left; /* Align text to the left */
+  margin-left: 60px; /* Add margin to the left */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 200px;
+}
+
+
+
+.photoContainer {
+  width: calc(50% - 2px); /* Each container takes 50% of the left side minus 2px for the gap */
+  margin-right: 5px; /* Add 2px margin to the right of each container */
+}
+
+.photoContainer:last-child {
+  margin-right: 0; /* Remove margin from the last container to prevent extra space */
+}
+
+/*
+.card {
+  width: 100%; 
+  height: 100%; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 2px;
+}
+*/
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: relative; /* Add position relative */
+}
+
+.card:hover {
+  transform: scale(1.4);
+  z-index: 1; /* Set z-index higher on hover */
+}
+.cardContent {
+  padding: 10px;
+  position: relative;
+}
+
+.card img {
+  width: 100%; /* Ensure image fills the card horizontally */
+  height: calc(100% - 40px); /* Subtract the height of the content below the image */
+  object-fit: cover; /* Scale the image to cover the entire container */
+  object-position: top left; /* Position the image at the top left */
+  border-radius: 5px 5px 0 0; /* Apply border radius only to top corners */
+}
+
+
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.star {
+  color: rgb(219, 168, 29); /* Set star color to yellow */
+}
+
+.reviews {
+  margin-left: 5px;
+}
+
+.views {
+  display: flex;
+  align-items: center;
+}
+
+.views span {
+  margin-right: 5px;
+}
+
+.watched {
+  color: grey; /* Set color to grey */
+}
+
+
+
+.rightSide h2,
+.rightSide p {
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 10px; /* Add bottom margin */
+  line-height: 1.5; /* Set line height */
+}
+
+.tutorialButton,
+.exploreButton {
+  display: block; /* Ensure buttons are displayed as block elements */
+  
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 10px; /* Add bottom margin */
+  color:  rgb(196, 118, 45);
+  background-color: rgb(226, 212, 207);
+  border-color:  rgb(226, 215, 211);
+  padding: 5px 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cardContent .overlay .playIcon {
+  width: 40px; 
+  height: auto;
+  z-index: 1; 
+  top: 20%;
+  bottom: 50%;
+}
+.sectionTwo {
+  margin: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto; 
+  gap: 30px; 
+  justify-content: center;
+  align-items: center; 
+}
+.box {
+  width: 180px; 
+  height: 200px; 
+  background-color: #f3ebeb;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  margin: 0 10px; 
+}
+.boxContent {
+  text-align: center; 
+}
+.box:nth-child(even) {
+  margin-top: -40px; 
+  margin-bottom: 20px;
+  margin-left:-10px;
+}
+.span1{
+ 
+  font-stretch: expanded;
+  font-size: 60px;
+  font-weight: bolder;
+  color: orange;
+}
+.span2{
+
+  font-stretch: expanded;
+  font-size: 60px;
+  font-weight: bolder;
+  color: rgb(223, 40, 40);
+}
+.span3{
+
+  font-stretch: expanded;
+  font-size: 60px;
+  font-weight: bolder;
+  color: rgb(206, 67, 206);
+}
+.span4{
+
+  font-stretch: expanded;
+  font-size: 60px;
+  font-weight: bolder;
+  color: rgb(167, 21, 77);
+}
+.sectionContainer {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.leftSide2 {
+  width: 50%; 
+  margin-left:200px;
+
+}
+.box:hover {
+  background-color: #f7caca; 
+}
+.rightSide2 {
+  width: 50%; 
+  text-align: left; 
+  margin-left: 10px; 
+  margin-top: 150px;
+  margin-bottom: 2px;
+  margin-right: 200px;
+}
+.rightSide h2,
+.rightSide p {
+  margin-top: 0; 
+  margin-bottom: 10px; 
+  line-height: 1.5; 
+  font-stretch: extra-condensed;
+}
+
+
+.downArrow {
+  position: absolute;
+  bottom: -490px;
+  left: 56%; 
+  transform: translateX(-50%);
+}
+
+
+.downArrow svg {
+  color: #333; 
+  font-size: 44px; 
+}
+/*section-four*/
+.quality{
+  color: rgb(224, 119, 32);
+  font-size: 20px;
+  font-stretch: extra-expanded;
+  display: block; /* Ensure the span takes up the full width */
+  text-align: center; /* Center the text horizontally */
+}
+.tutorials{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.photoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+.quality,
+.tutorials {
+  text-align: center; /* Center text within span and paragraph */
+}
+.cardss2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Center the cards vertically */
+}
+
+.cardss2 .photoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.cardss2 .card {
+  text-align: center;
+}
+
+.cardss2 .card img {
+  width: 100%;
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire container */
+}
+
+
+.cardss2 .card .playIcon {
+  margin: 5px 0;
+}
+
+.cardss2 .card .rating {
+  margin: 5px 0;
+}
+
+.cardss2 .card .rating span {
+  font-size: 14px;
+}
+
+.cardss2 .card .para {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.cardss2 .card .views {
+  margin-top: 5px;
+}
+
+.cardss2 .card .views span {
+  font-size: 10px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  cursor: pointer;
+}
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-symbol {
+  background-color: cyan;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+
+  .accordion {
+    width: 90%;
+  }
+}
